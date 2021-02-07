@@ -1,0 +1,31 @@
+{% extends "main/base.html" %}
+{% block title %} Arodanap - Profile {% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+  <div class="content-section mx-auto">
+    <h4>Profile</h4>
+  </div>
+  <div class="content-section mx-auto">
+    <div class="media">
+      <img class="rounded-circle account-img" src="{{user.profile.image.url}}">
+      <div class="content-info">
+        <h2 class="media-heading">{{user.username}}</h2>
+        <p class="text-secondary">{{user.email}}</p>
+      </div>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <fieldset class="form-group">
+          <legend class="border-bottom mb-4">Update Profile</legend>
+          {{ u_update_form|crispy }}
+          {{ p_update_form|crispy}}
+          <button type="submit" class='btn btn-success'>Update</button>
+      </fieldset>
+    </form>
+  </div>
+      
+{% endblock %}

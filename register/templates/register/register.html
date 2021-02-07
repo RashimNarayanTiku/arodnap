@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+
+{% block title %} Arodnap - Registration {% endblock %}
+
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="content-section mx-auto">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group" style="margin:0;">
+                <legend class="border-bottom mb-4">Register</legend>
+                {{ form|crispy }}
+                <button type="submit" class='btn btn-success'>Sign Up</button>
+            </fieldset>
+        </form>
+        
+        <small class="text-muted">
+            Already Have An Account? <a  href="{% url 'login' %}">Log In</a>
+        </small>
+    </div>
+    
+{% endblock %}
+

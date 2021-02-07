@@ -1,0 +1,166 @@
+body {
+    word-wrap: break-word ;
+    background-color: #f8f8f8 !important;
+}
+
+.dropdown-menu {
+    min-width:100% !important;
+}
+
+@media (max-width: 650px){
+    .rounded-circle.account-img{
+        display: none;
+    }
+    .media{
+        margin-bottom: 3%;
+    }
+}
+
+list-group-item{
+    background-color: #f8f8f8;
+}
+
+div.dropdown-menu{
+    margin-right: 20%;
+}
+nav.navbar{
+    padding:0.7% 5% 0.6% 5%;
+    margin-bottom: 2%;
+    background-color:#42464b;
+}
+
+.side-account-img{
+    height: 38px;
+    width: 42px;
+    margin:0px;
+    display: inline;
+}
+.caret{
+    display:inline;
+}
+.dropdown-toggle::after{
+    display:none;
+}
+a.navbar-item{
+    color: #f8f9fa !important;
+    text-decoration: none;
+}
+a.nav-link{
+    color: #f8f9fa !important;
+    text-decoration: none;
+}
+
+
+.fa.fa-pencil{
+    display: none !important;
+}
+
+.fa.fa-trash{
+    display: none !important;
+}
+
+.box_title{
+    font-size:x-large;
+}
+
+.entry_text{
+    padding-top:2%;
+}
+.entry_title:hover > .fa.fa-pencil {
+    display: inline-block !important;
+}
+
+.entry_title:hover > .fa.fa-trash {
+    display: inline-block !important;
+}
+
+.media-heading{
+    text-transform: capitalize !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+}
+  
+#Info{
+    margin-bottom: 1%;
+    font-size:100%;
+}
+
+ul {
+    margin: 0;
+  }
+
+  
+.bg-steel {
+    background-color: #5f788a;
+}
+  
+.site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+}
+  
+.site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+  
+.site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+}
+  
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 0.7%;
+    width:80%;
+}
+  
+.article-title {
+    color: #444444;
+}
+  
+a.article-title:hover {
+    color: #428bca;
+    text-decoration: none;
+}
+  
+.article-content {
+    white-space: pre-line;
+}
+  
+.article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+}
+  
+.article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+}
+  
+.article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+}
+  
+.article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+  
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+  
+.account-heading {
+    font-size: 2.5rem;
+}

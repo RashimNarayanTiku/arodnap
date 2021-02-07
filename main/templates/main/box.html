@@ -1,0 +1,36 @@
+{% extends 'main/base.html'%}
+
+{% block title %} Arodanap - Home {% endblock %}
+
+{% load tz %}
+
+{% block content %}
+
+    <div style="padding-left:11% ;"><h4> Arodnap's Box </h4></div>
+
+    <div class="content-section mx-auto">    
+        {% if entry %}
+        <div>
+            <div class='box_title'>{{entry.title}}</div>
+            <legend class="border-bottom"></legend>
+                <small class='text-muted'>
+                    On
+                    {% with tzDate=entry.created_at|timezone:'Asia/Kolkata' %}
+                        <span>{{ tzDate|date:"M d, Y" }} </span>
+                    {% endwith %}
+                </small>
+            </div>
+
+            <p class='entry_text'>
+                <!-- https://stackoverflow.com/questions/10270891/newline-in-models-textfield-not-rendered-in-template -->
+                {{entry.text|linebreaks}}
+            </p>
+
+            {% else %}
+                <small class='text-muted'> You haven't added any entries.</small>
+                <div style="margin-top: 4%;"> <a href={% url 'main:entry-create' %}> Add New Entry </a></div>       
+            {% endif %}
+
+    </div>
+
+{% endblock %}

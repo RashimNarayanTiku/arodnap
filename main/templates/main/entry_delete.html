@@ -1,0 +1,19 @@
+{% extends "main/base.html" %}
+
+{% block title %} Arodanap - Delete Entry {% endblock %}
+
+{% block content %}
+
+    <div class="content-section mx-auto">
+        <form method="POST">
+                {% csrf_token %}
+                <legend class="border-bottom mb-4">Delete Entry</legend>
+                <p>Are you sure you want to delete entry ? </p>
+                <h5> Name: {{object.title}}  </h5>
+                <br>
+                <button type='submit' class='btn btn-danger'> Delete </button>
+                <a href="{% url 'main:home' %}">Cancel</a>
+            </form>
+            </div>
+
+{% endblock %}
