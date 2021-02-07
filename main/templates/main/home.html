@@ -1,0 +1,55 @@
+{% extends 'main/base.html'%}
+
+{% block title %} Arodanap - Home {% endblock %}
+
+{% load tz %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    <div style="padding-left:11% ;"><h4> Today </h4></div>
+     
+    <div class="content-section mx-auto">
+            {% if entries %}
+                <ul class="list-group list-group-flush">
+                    {% for entry in entries %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span class='entry_title'> {{entry.title}}  
+                                 <a class='fa fa-pencil' href="{% url 'main:entry-update' entry.id %}"> </a>
+                                 <a class='fa fa-trash' href="{% url 'main:entry-delete' entry.id %}"> </a>
+                            </span>
+                            
+                            <!-- https://docs.djangoproject.com/en/3.1/topics/i18n/timezones/ -->
+                            <!-- https://stackoverflow.com/questions/6281404/how-to-apply-multiple-filters-on-a-django-template-variable -->
+                            {% with tzDate=entry.created_at|timezone:'Asia/Kolkata' %}
+                                <span class="badge badge-primary badge-pill"> {{ tzDate|date:"g:i a" }} </span>
+                            {% endwith %}
+
+                        </li>
+                    {% endfor %}
+                </ul>
+                <br>
+                {% else %}
+                <small class='text-muted'> No entries were added today.</small>
+                {% endif %}
+            <div style="margin-top: 4%;"> <a href={% url 'main:entry-create' %}> Add New Entry </a></div>
+        {% else %}
+
+            <h3> Welcome To Arodnap </h3>
+            <legend class="border-bottom mb-4"></legend>
+            
+            <p>
+                Arodnap is a box to store of all the good things that happen to you daily which we tend to forget.
+            </p>
+            <p>
+                When you feel down and need some motivation in life, just open this box and it will show you all <br> the great things
+                that happened to you.
+            </p>
+
+        {% endif %}
+
+            
+
+    </div>
+
+{% endblock %}
