@@ -21,9 +21,6 @@ python-dateutil==2.8.1
 python-decouple==3.4
 PyTweening==1.0.3
 pytz==2020.1
-pywhatkit==2.3
-pywin32==228
-pywin32-ctypes==0.2.0
 requests==2.23.0
 sqlparse==0.4.1
 tqdm==4.55.1
