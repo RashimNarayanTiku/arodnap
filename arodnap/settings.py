@@ -25,12 +25,12 @@ TIME_ZONE = 'Asia/Kolkata'
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7kai9&nc8$5uz%)@(0_o+o0m1tkjwrc#ute-$j!k4_6-i6)r0h'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = (os.environ.get('DEBUG_VALUE'))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['arodnap.herokuapp.com']
 
 
 # Application definition
