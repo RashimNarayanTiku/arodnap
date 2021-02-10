@@ -11,7 +11,7 @@
 
 ## Screenshots
 
-* ### Home Pages
+### Home Pages
 ![Home](logout.png)
 
 ![Home](home.png)
@@ -20,5 +20,5 @@
 
 &nbsp; &nbsp;
 
-* ### Arodnap's Box Page
+### Arodnap's Box Page
 ![box](box.png)
